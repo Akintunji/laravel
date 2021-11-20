@@ -40,8 +40,8 @@ Route::get('/continue', function () {
 Route::get('/postjob','showjobform' )->middleware(['auth']);
 Route::post('/jobsfeed', [Thejobmart::class,'save'])->middleware(['auth']);
 Route::get('/comment', [Thejobmart::class,'showcomment']);
-Route::post('/comment', [Thejobmart::class,'poscomment']);
-Route::delete('/continue/{id}', [Thejobmart::class,'delete']);
+Route::post('/comment', [Thejobmart::class,'postcomment'])->name('comment');
+Route::delete('/continue/{id}', [Thejobmart::class,'delete'])->name('comment');
     
 });
 require __DIR__.'/auth.php';
