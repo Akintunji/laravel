@@ -1,0 +1,20 @@
+<div class="container">
+        
+        <span class="close" onclick="span()2" >&times;</span>
+       <form action="continue.php" method="post">
+     <p><label>Name Of Organization/firm</label><input type="text" name="recfirm" required="required" placeholder=" e.g.Zambug. plc"> </p>
+      <p><label>Job tittle</label><input type="text" name="jobspec" required="required" placeholder="e.g Mechanical Engineering"> </p>
+     <p><label>Job requirement</label><input type="text" name="jobreq" required="required" placeholder="e.g B.Eng Mechanical Engineering"> </p>
+     <p><label>Location</label><input type="text" name="location" required="required" placeholder="e.g Lagos"> </p>
+     <p><label>  Renumeration</label><input type="text" name="salary" placeholder="e.g 2100000-5100000 per anum"> </p>
+     <p><label>Recruiter's contact </label><input type="text" name="phonenumber" placeholder="081313843.."> </p>
+     <p><label>Sourcing Email </label><input type="text" name="sourcemail" placeholder="e.g recruitersmith@gmail.com"> </p>
+     <p><label>Job decription /other informations:<textarea name="others" placeholder="other informations" rows="4" cols="10"></textarea>
+       <p><label>Category</label><select><option>CATEGORY</option>
+     <option name="category" value="Engineering">ENGINEERING</option><option value="health" name="category">HEALTH</option><option name="category" value="science">SCIENCE</option><option name="category" value="Administration">ADMINISTRATION</option></select></p>
+     <p><input type="hidden" name="date"></p>
+     <p><input type="hidden" name="psfd"></p>
+     <input type="submit" name="submit" value="submit">
+     N.B:Genuine Jobs are ALLOWED here.
+     </form>
+     </div>
