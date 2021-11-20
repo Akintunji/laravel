@@ -34,25 +34,34 @@ public function save(Request $req){
 }
 
 public function savecomment(Request $req, $id ){
-        
-    $user= new User;
-    $user->comment=$req->comment;
+      $user=DB::table('comment');
+      $user->comment=$req->comment;
     $user->poster=$req->poster;
-    $user->jobreq=$id;
+    $user->id=$id;
     $user->save();
     return view('comment');
 }
 public function delete(Request $req, $id ){
-    $Myjmart=user::find($id);
+  
+    $poster=logtable::where("id", $id)->get();
+    $authenticateduser=User::where("email",Auth::user()->email)->get();
+   if(  $poster== $authenticateduser){
     $Myjmart->delete();
     return view('continue', 'Post deleted');
 }
-
+   else{ return view('continue', 'Post can not be deleted');}
+}
 
 
 public function showjobform( ){
-       return view('dashboard', 'Post deleted');
+       return view('', 'Post deleted');
 }
 
     //
+}
+public function showcomment(Request $req, $id ){
+       
+    $id=$req->id;
+        $mjmart=DB::table('comment')->where(['id', $id]);
+    return view('comment' ['Myjmarts'=>$Myjmart]);
 }
