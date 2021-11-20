@@ -1,0 +1,38 @@
+         <div class="container">
+
+       <form action="/edit" method="post">
+       @csrf
+     <p><label>Name Of Organization/firm</label><input type="text" name="recfirm"  placeholder=" e.g.Zambug. plc"  value="
+                {{ $row['recfirm]}}"> </p>
+      <p><label>Job tittle</label><input type="text" name="jobspec"  placeholder="e.g Mechanical Engineering"  value="
+                {{ $row['jobspec']}}"> </p>
+     <p><label>Job requirement</label><input type="text" name="jobreq" value="
+                {{ $row['jobreq']}}"placeholder="e.g B.Eng Mechanical Engineering"> </p>
+     <p><label>Location</label><input type="text" name="location" value="
+                {{ $row['locaion']}}" placeholder="e.g Lagos"> </p>
+     <p><label>  Renumeration</label><input type="text" name="salary" placeholder="e.g 2100000-5100000 per anum" value="
+                {{ $row['salary']}}"> </p>
+     <p><label>Recruiter's contact </label><input type="text" name="phonenumber" placeholder="081313843.." value="
+                {{ $row['phonenumber'}}"> </p>
+     <p><label>Sourcing Email </label><input type="text" name="sourcemail" placeholder="e.g recruitersmith@gmail.com" value="
+                {{ $row['sourcemail']}}"> </p>
+     <p><label>Job decription /other informations:<textarea name="others" placeholder="other informations" rows="4" cols="10" value="
+                {{ $row['others']}}"></textarea>
+       <p><label>Category</label><select><option>CATEGORY</option>
+     <option name="category" value="Engineering">ENGINEERING</option><option value="health" name="category">HEALTH</option><option name="category" value="science">SCIENCE</option><option name="category" value="Administration">ADMINISTRATION</option></select></p>
+     <p><input type="hidden" name="id" value="
+                {{ $row['id]}}"></p>
+     <p><input type="hidden" name="psfd"></p>
+     <input type="submit" name="submit" value="submit">
+    
+     </form>
+     </div>
+            
+            </div>
+            <button>update</button>
+
+
+
+
+
+        </form>
